@@ -1,0 +1,92 @@
+body{
+	font-weight: 300;
+	color: #f0f0f0;
+	font-family: Arial, sans-serif;	
+}
+*, *:after, *::before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.grid1{
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	position:relative;
+	width:100%;	
+}
+.grid1 li{
+	position:relative;
+	float:left;
+	font-size:12em;
+	line-height:1.5;
+	width:16.6666%;
+	width:calc(100%/6);
+	background: #e74d3c;
+}
+.grid1 li span{
+	font-weight:900;
+	line-height:1;
+	position:relative;
+	color:hsla(0,0%,0%,0.6);
+	-webkit-transform-style:preserve-3d;
+	-o-transform-style:preserve-3d;
+	-ms-transform-style:preserve-3d;
+	-moz-transform-style:preserve-3d;
+	transform-style:preserve-3d;
+	z-index:1;	
+}
+.grid1 li span:before,
+.grid1 li span:after{
+	content:attr(data-letter);
+	position:absolute;
+	top:12px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	z-index:10;
+	-webkit-transtion:all 0.3s;
+	-moz-transtion:all 0.3s;
+	-o-transtion:all 0.3s;
+	-ms-transtion:all 0.3s;
+	transition:all 0.3s;
+	-webkit-transform-origin: 0 50%;
+	-ms-transform-origin: 0 50%;
+	-moz-transform-origin: 0 50%;
+	-o-transform-origin: 0 50%;
+	transform-origin: 0 50%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.grid1 li span:before {
+	text-shadow: none;
+	color: hsla(0, 0%, 0%, 0.12);
+}
+
+.ot-letter-left span:after{
+	-webkit-transform:rotateY(15deg);
+	-o-transform:rotateY(15deg);
+	-moz-transform:rotateY(15deg);
+	-ms-transform:rotateY(15deg);
+	transform:rotateY(15deg);
+}
+.ot-letter-left span:after {
+	color: #e74d3c;
+	text-shadow: -1px 0px 0px hsla(360, 100%, 100%, 0.1), 3px 0px 1px hsla(0, 0%, 0%, 0.4);
+}
+.ot-letter-left:hover span:after{
+	-webkit-transform: rotateY(45deg);
+	-ms-transform: rotateY(45deg);
+	-moz-transform: rotateY(45deg);
+	-o-transform: rotateY(45deg);
+	transform: rotateY(45deg);
+	color: #F3A79E;
+}
+.ot-letter-left:hover span:before{
+	-webkit-transform: skew(0deg,30deg);
+	-moz-transform: skew(0deg,30deg);
+	-o-transform: skew(0deg,30deg);
+	-ms-transform: skew(0deg,30deg);
+	transform: skew(0deg,30deg);
+}
